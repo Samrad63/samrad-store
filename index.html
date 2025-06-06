@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>فروشگاه لباس</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="images/logo.png"
+            alt="سام‌راد"
+            width="40"
+            height="40"
+            class="me-2"
+          />
+          فروشگاه سام‌راد
+        </a>
+
+        <div class="d-flex align-items-center ms-auto gap-2 flex-wrap">
+          <form
+            class="d-flex me-3"
+            role="search"
+            onsubmit="event.preventDefault(); applyFilters();"
+          >
+            <input
+              class="form-control me-2"
+              type="search"
+              id="searchInput"
+              placeholder="جستجو..."
+              aria-label="Search"
+              oninput="applyFilters()"
+              style="border-radius: 20px; min-width: 200px"
+            />
+          </form>
+
+          <a href="login.html" class="btn btn-outline-light">ورود / ثبت‌نام</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div
+        class="p-4 mb-4 rounded text-white"
+        style="background: linear-gradient(to right, #007bff, #00c6ff)"
+      >
+        <h2>فروش ویژه تابستانه!</h2>
+        <p>با خرید بالای 500 هزار تومان، ارسال رایگان دریافت کنید!</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div
+        id="mainCarousel"
+        class="carousel slide mb-4"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img
+              src="images/banner1.png"
+              class="d-block w-100"
+              alt="تخفیف تابستانی"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/banner2.png"
+              class="d-block w-100"
+              alt="جدیدترین مدل‌ها"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#mainCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#mainCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <label for="genderFilter" class="form-label">جنسیت</label>
+          <select
+            id="genderFilter"
+            class="form-select"
+            onchange="applyFilters()"
+          >
+            <option value="all">همه</option>
+            <option value="male">مردانه</option>
+            <option value="female">زنانه</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="categoryFilter" class="form-label">دسته‌بندی</label>
+          <select
+            id="categoryFilter"
+            class="form-select"
+            onchange="applyFilters()"
+          >
+            <option value="all">همه</option>
+            <option value="پیراهن">پیراهن</option>
+            <option value="تی‌شرت">تی‌شرت</option>
+            <option value="شلوار">شلوار</option>
+            <option value="جوراب">جوراب</option>
+            <option value="کفش">کفش</option>
+            <option value="مانتو">مانتو</option>
+            <option value="کت">کت</option>
+            <option value="کیف">کیف</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="priceFilter" class="form-label"
+            >حداکثر قیمت (تومان)</label
+          >
+          <input
+            type="range"
+            class="form-range"
+            min="100000"
+            max="10000000"
+            step="50000"
+            id="priceFilter"
+            oninput="applyFilters()"
+          />
+          <div id="priceValue" class="text-center mt-1">
+            حداکثر قیمت: 10000000 تومان
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="product-list">
+        <!-- محصولات با JavaScript اضافه می‌شن -->
+      </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script>
+      const container = document.getElementById("product-list");
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function addToCart(productId) {
+        const existing = cart.find((p) => p.id === productId);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          const product = products.find((p) => p.id === productId);
+          cart.push({ ...product, qty: 1 });
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("محصول به سبد خرید اضافه شد!");
+      }
+
+      function renderProducts(filteredProducts) {
+        container.innerHTML = "";
+        filteredProducts.forEach((p) => {
+          container.innerHTML += `
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img src="${p.image}" class="card-img-top" alt="${p.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${p.name}</h5>
+                  <p class="card-text">${p.price.toLocaleString()} تومان</p>
+                  <button class="btn btn-primary" onclick="addToCart(${
+                    p.id
+                  })">افزودن به سبد خرید</button>
+                </div>
+              </div>
+            </div>`;
+        });
+      }
+
+      function filterProducts(gender) {
+        if (gender === "all") {
+          renderProducts(products);
+        } else {
+          const filtered = products.filter((p) => p.gender === gender);
+          renderProducts(filtered);
+        }
+      }
+
+      // نمایش اولیه همه محصولات
+      renderProducts(products);
+      const genderFilter = document.getElementById("genderFilter");
+      const categoryFilter = document.getElementById("categoryFilter");
+      const priceFilter = document.getElementById("priceFilter");
+      const priceValue = document.getElementById("priceValue");
+
+      priceFilter.addEventListener("input", () => {
+        priceValue.textContent = `حداکثر قیمت: ${(+priceFilter.value).toLocaleString()} تومان`;
+      });
+
+      function applyFilters() {
+        const gender = genderFilter.value;
+        const category = categoryFilter.value;
+        const maxPrice = parseInt(priceFilter.value);
+        const searchQuery = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+
+        const filtered = products.filter((p) => {
+          return (
+            (gender === "all" || p.gender === gender) &&
+            (category === "all" || p.category === category) &&
+            p.price <= maxPrice &&
+            p.name.toLowerCase().includes(searchQuery)
+          );
+        });
+
+        renderProducts(filtered);
+      }
+
+      renderProducts(products); // نمایش همه محصولات در ابتدا
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="bg-dark text-white mt-5 p-4 text-center">
+      <p>
+        تمامی حقوق برای فروشگاه <strong>سام‌راد</strong> محفوظ است &copy; 2025
+      </p>
+      <p>ارتباط با ما: samrad@email.com | ۰۹۱۲۱۲۳۴۵۶۷</p>
+    </footer>
+  </body>
+</html>
