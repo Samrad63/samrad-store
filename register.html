@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ثبت‌نام کاربر - سام‌راد</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Tahoma, sans-serif;
+    }
+
+    .register-container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .register-container img {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 180px;
+    }
+
+    .btn-register {
+      background-color: #048578;
+      color: #ffffff;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .btn-register:hover {
+      background-color: #03695e;
+      color: #ffffff;
+    }
+
+    .form-link {
+      text-decoration: none;
+      color: #048578;
+    }
+
+    .form-link:hover {
+      color: #03695e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar ساده بالای صفحه -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#048578;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/samrad_logo.jpg" alt="سام‌راد" width="150">
+      </a>
+    </div>
+  </nav>
+
+  <!-- فرم ثبت‌نام -->
+  <div class="register-container">
+    <h3 class="text-center mb-4">ثبت‌نام در سام‌راد</h3>
+    <form action="dashboard.html" method="post">
+      <div class="mb-3">
+        <label for="name" class="form-label">نام و نام خانوادگی</label>
+        <input type="text" class="form-control" id="name" placeholder="نام و نام خانوادگی" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">ایمیل</label>
+        <input type="email" class="form-control" id="email" placeholder="example@mail.com" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">رمز عبور</label>
+        <input type="password" class="form-control" id="password" placeholder="رمز عبور خود را وارد کنید" required>
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">تکرار رمز عبور</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="رمز عبور را دوباره وارد کنید" required>
+      </div>
+      <button type="submit" class="btn btn-register mb-3">ثبت‌نام</button>
+      <div class="text-center">
+        <small>قبلاً حساب دارید؟ <a href="login.html" class="form-link">ورود</a></small>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

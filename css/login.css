@@ -1,0 +1,13 @@
+body {
+  padding-top: 70px;
+  background-color: #f8f9fa;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+/* ------------------------ */
+
+.navbar {
+  background-color: #40E0D0 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+}
