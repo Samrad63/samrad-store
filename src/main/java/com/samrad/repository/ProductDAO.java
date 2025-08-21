@@ -1,6 +1,6 @@
-package repository;
+package com.samrad.repository;
 
-import model.Product;
+import com.samrad.model.Product;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

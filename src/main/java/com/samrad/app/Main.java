@@ -1,5 +1,7 @@
-import model.Product;
-import repository.ProductDAO;
+package com.samrad.app;
+
+import com.samrad.model.Product;
+import com.samrad.repository.ProductDAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.List;

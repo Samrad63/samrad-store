@@ -1,4 +1,4 @@
-package model;
+package com.samrad.model;
 
 public class Product {
     private int id;
