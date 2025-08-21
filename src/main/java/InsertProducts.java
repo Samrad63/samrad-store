@@ -10,7 +10,7 @@
 //        try {
 //            // اتصال به دیتابیس
 //            Connection connection = DriverManager.getConnection(
-//                    "jdbc:oracle:thin:@//localhost:1521/xepdb1",
+//                    "jdbc:oracle:thin:@//localhost:1521/orclpdb1",
 //                    "HESAM",
 //                    "myjava123"
 //            );

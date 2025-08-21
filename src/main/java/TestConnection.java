@@ -8,7 +8,7 @@ public class TestConnection {
             Class.forName("oracle.jdbc.driver.OracleDriver");
 
             // اطلاعات اتصال
-            String url = "jdbc:oracle:thin:@localhost:1521:xe";
+            String url = "jdbc:oracle:thin:@//localhost:1521/orclpdb1";
             String user = "hesam";
             String password = "myjava123";
 
