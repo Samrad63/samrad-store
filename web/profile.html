@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پروفایل کاربر - سام‌راد</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#048578;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="dashboard.html">
+        <img src="images/samrad_logo.jpg" alt="سام‌راد" width="150">
+      </a>
+    </div>
+  </nav>
+
+  <!-- پروفایل -->
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h3>پروفایل من</h3>
+      <a href="dashboard.html" class="btn btn-secondary">بازگشت به داشبورد</a>
+    </div>
+
+    <form id="profileForm">
+      <div class="mb-3">
+        <label class="form-label">نام</label>
+        <input type="text" id="firstname" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">نام خانوادگی</label>
+        <input type="text" id="lastname" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">ایمیل</label>
+        <input type="email" id="email" class="form-control" required disabled>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">رمز عبور جدید (اختیاری)</label>
+        <input type="password" id="password" class="form-control" placeholder="اگر نمی‌خواهید تغییر دهید خالی بگذارید">
+      </div>
+      <button type="submit" class="btn btn-primary w-100">ذخیره تغییرات</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // پر کردن اطلاعات کاربر از localStorage
+    document.addEventListener("DOMContentLoaded", () => {
+      const user = JSON.parse(localStorage.getItem("userData"));
+      if(user) {
+        document.getElementById("firstname").value = user.firstname;
+        document.getElementById("lastname").value = user.lastname;
+        document.getElementById("email").value = user.email;
+      }
+    });
+
+    // ذخیره تغییرات
+    document.getElementById("profileForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const updatedUser = {
+        firstname: document.getElementById("firstname").value,
+        lastname: document.getElementById("lastname").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+      };
+
+      localStorage.setItem("userData", JSON.stringify(updatedUser));
+      localStorage.setItem("userFullname", updatedUser.firstname + " " + updatedUser.lastname);
+
+      alert("تغییرات ذخیره شد ✅");
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>

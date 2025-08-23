@@ -4,16 +4,17 @@ const genderFilter = document.getElementById("genderFilter");
 const categoryFilter = document.getElementById("categoryFilter");
 const priceFilter = document.getElementById("priceFilter");
 const priceValue = document.getElementById("priceValue");
+const searchInput = document.getElementById("searchInput");
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // دریافت محصولات از سرور
-fetch("http://localhost:8080/yourapp/products")
+fetch("products")
   .then(res => res.json())
   .then(data => {
-    // مطمئن شویم مسیر تصاویر درست باشد
+    // مسیر تصاویر: اگر فقط اسم فایل باشه، images/ اضافه میشه
     products = data.map(p => ({
       ...p,
-      image: `images/${p.image.split("/").pop()}`
+      image: p.image.startsWith("images/") ? p.image : `images/${p.image}`
     }));
     renderProducts(products);
   })
@@ -51,7 +52,7 @@ function applyFilters() {
   const gender = genderFilter.value;
   const category = categoryFilter.value;
   const maxPrice = parseInt(priceFilter.value);
-  const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+  const searchQuery = searchInput.value.toLowerCase();
 
   const filtered = products.filter(p => 
     (gender === "all" || p.gender === gender) &&
@@ -70,4 +71,4 @@ priceFilter.addEventListener("input", () => {
 });
 genderFilter.addEventListener("change", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
-document.getElementById("searchInput").addEventListener("input", applyFilters);
+searchInput.addEventListener("input", applyFilters);

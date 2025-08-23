@@ -2,12 +2,45 @@ body {
   padding-top: 70px;
   background-color: #f8f9fa;
   font-family: "Vazirmatn", sans-serif;
+  direction: rtl;
+  text-align: right;
 }
 
 /* ------------------------ */
 
-.navbar {
-  background-color: #40E0D0 !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 10px 20px;
+
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.login-container img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 180px;
+}
+
+.btn-login {
+  background-color: #048578;
+  color: #ffffff;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #03695e;
+  color: #ffffff;
+}
+
+.form-link {
+  text-decoration: none;
+  color: #048578;
+}
+
+.form-link:hover {
+  color: #03695e;
 }
