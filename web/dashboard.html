@@ -9,25 +9,36 @@
 </head>
 <body>
 
-  <!-- Navbar ساده -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#048578;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/samrad_logo.jpg" alt="سام‌راد" width="150">
-      </a>
-    </div>
-  </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid d-flex align-items-center">
 
-  <!-- داشبورد -->
-  <div class="dashboard-container">
-    <div class="dashboard-header">
-      <h3>سلام، <span id="username"></span></h3>
+    <!-- بخش سمت راست: نام کاربر و خروج -->
+    <div class="d-flex align-items-center ms-auto">
+      <span class="text-white me-5">سلام، <span id="username"></span></span>
       <a href="login.html" class="btn btn-logout" id="logoutBtn">خروج</a>
     </div>
 
-    <div class="dashboard-links row g-4">
+    <!-- لوگو سمت چپ -->
+    <a class="navbar-brand d-flex align-items-center me-auto" href="index.html">
+      <img src="images/samrad_logo.jpg" alt="سام‌راد" width="195" height="60" />
+    </a>
+
+  </div>
+</nav>
+
+
+
+
+
+  <!-- فاصله برای ثابت بودن ناوبار -->
+  <div style="height:70px;"></div>
+
+  <!-- داشبورد -->
+  <div class="dashboard-container">
+    <div class="row g-4">
       <div class="col-md-6">
-        <div class="card" onclick="location.href='shop.html'">
+        <div class="card" onclick="location.href='index.html'">
           <div class="card-body">
             <h5>مشاهده محصولات</h5>
           </div>

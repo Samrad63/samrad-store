@@ -1,20 +1,38 @@
 body {
-  padding-top: 70px;
-  background-color: #f8f9fa;
-  font-family: "Vazirmatn", sans-serif;
+  background-color: #f9f9f9;
+  font-family: 'tahoma', sans-serif;
   direction: rtl;
-  text-align: right;
+  margin: 0;
+  padding: 0;
 }
 
+/* ناوبار */
+.navbar {
+  background-color: #40E0D0 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  position: fixed;
+  top: 70px;  /* فاصله از بالای صفحه */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* برای قرار دادن logout در یک سمت */
+  align-items: center;
+}
+
+
+
+
+/* فاصله محتوا از پایین ناوبار */
 .dashboard-container {
   max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: calc(70px + 70px); 
 }
 
+/* هدر داشبورد */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -22,33 +40,30 @@ body {
   margin-bottom: 30px;
 }
 
-.dashboard-header h3 {
-  margin: 0;
-  color: #048578;
-}
-
+/* دکمه خروج روی ناوبار */
 .btn-logout {
-  background-color: #ff4d4d;
-  color: #ffffff;
-  transition: 0.3s;
+  background: #d9534f;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .btn-logout:hover {
-  background-color: #cc0000;
-  color: #ffffff;
+  background: #c9302c;
+  color: #fff;
 }
 
-.dashboard-links .card {
-  transition: 0.3s;
+/* کارت‌ها */
+.card {
   cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
 }
 
-.dashboard-links .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.dashboard-links .card h5 {
-  color: #048578;
-  margin-bottom: 0;
+.card:hover {
+  transform: scale(1.05);
 }

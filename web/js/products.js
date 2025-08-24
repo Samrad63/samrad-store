@@ -8,7 +8,7 @@ const searchInput = document.getElementById("searchInput");
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // دریافت محصولات از سرور
-fetch("products")
+fetch("/ProductServlet")
   .then(res => res.json())
   .then(data => {
     // مسیر تصاویر: اگر فقط اسم فایل باشه، images/ اضافه میشه

@@ -17,7 +17,7 @@ import java.util.List;
 
 import com.google.gson.Gson;
 
-
+@WebServlet("/ProductServlet")
 public class ProductServlet extends HttpServlet {
 
     @Override

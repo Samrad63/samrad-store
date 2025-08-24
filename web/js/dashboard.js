@@ -1,18 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // پر کردن نام کاربر از localStorage
+  // گرفتن اطلاعات کاربر
   const userData = JSON.parse(localStorage.getItem("userData"));
+
   if (userData) {
-    document.getElementById("username").innerText = userData.firstname + " " + userData.lastname;
+    const username = document.getElementById("username");
+    if (username) {
+      username.innerText = userData.firstname + " " + userData.lastname;
+    }
   } else {
-    // اگر کاربر وارد نشده، هدایت به صفحه ورود
+    // اگر وارد نشده بود
     window.location.href = "login.html";
+    return;
   }
 
   // دکمه خروج
   const logoutBtn = document.getElementById("logoutBtn");
-  logoutBtn.addEventListener("click", () => {
-    localStorage.removeItem("userData");
-    localStorage.removeItem("userFullname");
-    window.location.href = "login.html";
-  });
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("userData");
+      window.location.href = "login.html";
+    });
+  }
 });

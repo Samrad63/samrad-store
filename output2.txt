@@ -1,0 +1,351 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 1043-7C9C
+D:.
+|   .gitignore
+|   output.txt
+|   output2.txt
+|   project_structure.txt
+|   README.md
+|   
++---.idea
+|   |   .gitignore
+|   |   misc.xml
+|   |   modules.xml
+|   |   uni_project.iml
+|   |   vcs.xml
+|   |   workspace.xml
+|   |   
+|   +---artifacts
+|   |       samrad_war_exploded.xml
+|   |       
+|   \---libraries
+|           gson_2_10_1.xml
+|           lib.xml
+|           ojdbc11.xml
+|           
++---out
+|   +---artifacts
+|   |   \---samrad_war_exploded
+|   |       |   cart.html
+|   |       |   checkout.html
+|   |       |   dashboard.html
+|   |       |   index.html
+|   |       |   index.jsp
+|   |       |   login.html
+|   |       |   profile.html
+|   |       |   register.html
+|   |       |   
+|   |       +---css
+|   |       |       cart.css
+|   |       |       checkout.css
+|   |       |       dashboard.css
+|   |       |       login.css
+|   |       |       style.css
+|   |       |       
+|   |       +---images
+|   |       |       baner1.jpg
+|   |       |       baner2.jpg
+|   |       |       baner3.jpg
+|   |       |       baner4.jpg
+|   |       |       baner5.jpg
+|   |       |       baner6.jpg
+|   |       |       banersmall1.jpg
+|   |       |       banersmall2.jpg
+|   |       |       logo.png
+|   |       |       product1.jpg
+|   |       |       product10.jpg
+|   |       |       product11.jpg
+|   |       |       product12.jpg
+|   |       |       product13.jpg
+|   |       |       product14.jpg
+|   |       |       product15.jpg
+|   |       |       product16.jpg
+|   |       |       product17.jpg
+|   |       |       product18.jpg
+|   |       |       product19.jpg
+|   |       |       product2.jpg
+|   |       |       product20.jpg
+|   |       |       product21.jpg
+|   |       |       product22.jpg
+|   |       |       product23.jpg
+|   |       |       product24.jpg
+|   |       |       product25.jpg
+|   |       |       product26.jpg
+|   |       |       product27.jpg
+|   |       |       product28.jpg
+|   |       |       product29.jpg
+|   |       |       product3.jpg
+|   |       |       product30.jpg
+|   |       |       product4.jpg
+|   |       |       product5.jpg
+|   |       |       product6.jpg
+|   |       |       product7.jpg
+|   |       |       product8.jpg
+|   |       |       product9.jpg
+|   |       |       samrad_logo.jpg
+|   |       |       
+|   |       +---js
+|   |       |       dashboard.js
+|   |       |       products.js
+|   |       |       profile.js
+|   |       |       
+|   |       +---web
+|   |       |   \---WEB-INF
+|   |       |           web.xml
+|   |       |           
+|   |       \---WEB-INF
+|   |           |   web.xml
+|   |           |   
+|   |           +---classes
+|   |           |   |   cart.html
+|   |           |   |   checkout.html
+|   |           |   |   dashboard.html
+|   |           |   |   index.html
+|   |           |   |   index.jsp
+|   |           |   |   login.html
+|   |           |   |   register.html
+|   |           |   |   
+|   |           |   +---com
+|   |           |   |   \---samrad
+|   |           |   |       +---app
+|   |           |   |       |       Main.class
+|   |           |   |       |       TestConnection.class
+|   |           |   |       |       
+|   |           |   |       +---model
+|   |           |   |       |       Product.class
+|   |           |   |       |       User.class
+|   |           |   |       |       
+|   |           |   |       +---repository
+|   |           |   |       |       ProductDAO.class
+|   |           |   |       |       UserDAO.class
+|   |           |   |       |       
+|   |           |   |       +---servlet
+|   |           |   |       |       ProductServlet.class
+|   |           |   |       |       UserServlet.class
+|   |           |   |       |       
+|   |           |   |       \---util
+|   |           |   |               DBConnection.class
+|   |           |   |               
+|   |           |   +---css
+|   |           |   |       cart.css
+|   |           |   |       checkout.css
+|   |           |   |       login.css
+|   |           |   |       style.css
+|   |           |   |       
+|   |           |   +---images
+|   |           |   |       baner1.jpg
+|   |           |   |       baner2.jpg
+|   |           |   |       baner3.jpg
+|   |           |   |       baner4.jpg
+|   |           |   |       baner5.jpg
+|   |           |   |       baner6.jpg
+|   |           |   |       banersmall1.jpg
+|   |           |   |       banersmall2.jpg
+|   |           |   |       logo.png
+|   |           |   |       product1.jpg
+|   |           |   |       product10.jpg
+|   |           |   |       product11.jpg
+|   |           |   |       product12.jpg
+|   |           |   |       product13.jpg
+|   |           |   |       product14.jpg
+|   |           |   |       product15.jpg
+|   |           |   |       product16.jpg
+|   |           |   |       product17.jpg
+|   |           |   |       product18.jpg
+|   |           |   |       product19.jpg
+|   |           |   |       product2.jpg
+|   |           |   |       product20.jpg
+|   |           |   |       product21.jpg
+|   |           |   |       product22.jpg
+|   |           |   |       product23.jpg
+|   |           |   |       product24.jpg
+|   |           |   |       product25.jpg
+|   |           |   |       product26.jpg
+|   |           |   |       product27.jpg
+|   |           |   |       product28.jpg
+|   |           |   |       product29.jpg
+|   |           |   |       product3.jpg
+|   |           |   |       product30.jpg
+|   |           |   |       product4.jpg
+|   |           |   |       product5.jpg
+|   |           |   |       product6.jpg
+|   |           |   |       product7.jpg
+|   |           |   |       product8.jpg
+|   |           |   |       product9.jpg
+|   |           |   |       samrad_logo.jpg
+|   |           |   |       
+|   |           |   +---js
+|   |           |   |       products.js
+|   |           |   |       
+|   |           |   \---WEB-INF
+|   |           |           web.xml
+|   |           |           
+|   |           \---lib
+|   |                   annotations-api.jar
+|   |                   catalina-ant.jar
+|   |                   catalina-ha.jar
+|   |                   catalina-ssi.jar
+|   |                   catalina-storeconfig.jar
+|   |                   catalina-tribes.jar
+|   |                   catalina.jar
+|   |                   ecj-4.20.jar
+|   |                   el-api.jar
+|   |                   gson-2.10.1.jar
+|   |                   jakarta.servlet-api-6.0.0.jar
+|   |                   jasper-el.jar
+|   |                   jasper.jar
+|   |                   jaspic-api.jar
+|   |                   jsp-api.jar
+|   |                   ojdbc11.jar
+|   |                   servlet-api.jar
+|   |                   tomcat-api.jar
+|   |                   tomcat-coyote-ffm.jar
+|   |                   tomcat-coyote.jar
+|   |                   tomcat-dbcp.jar
+|   |                   tomcat-i18n-cs.jar
+|   |                   tomcat-i18n-de.jar
+|   |                   tomcat-i18n-es.jar
+|   |                   tomcat-i18n-fr.jar
+|   |                   tomcat-i18n-ja.jar
+|   |                   tomcat-i18n-ko.jar
+|   |                   tomcat-i18n-pt-BR.jar
+|   |                   tomcat-i18n-ru.jar
+|   |                   tomcat-i18n-zh-CN.jar
+|   |                   tomcat-jdbc.jar
+|   |                   tomcat-jni.jar
+|   |                   tomcat-util-scan.jar
+|   |                   tomcat-util.jar
+|   |                   tomcat-websocket.jar
+|   |                   websocket-api.jar
+|   |                   
+|   \---production
+|       +---uni project
+|       |   \---main
+|       |       \---webapp
+|       |               index.jsp
+|       |               
+|       \---uni_project
+|           \---com
+|               \---samrad
+|                   +---app
+|                   |       Main.class
+|                   |       TestConnection.class
+|                   |       
+|                   +---model
+|                   |       Product.class
+|                   |       User.class
+|                   |       
+|                   +---repository
+|                   |       ProductDAO.class
+|                   |       UserDAO.class
+|                   |       
+|                   +---servlet
+|                   |       ProductServlet.class
+|                   |       UserServlet.class
+|                   |       
+|                   \---util
+|                           DBConnection.class
+|                           
++---src
+|   \---main
+|       \---java
+|           \---com
+|               \---samrad
+|                   +---app
+|                   |       InsertProducts.java
+|                   |       Main.java
+|                   |       TestConnection.java
+|                   |       
+|                   +---model
+|                   |       Product.java
+|                   |       User.java
+|                   |       
+|                   +---repository
+|                   |       ProductDAO.java
+|                   |       UserDAO.java
+|                   |       
+|                   +---service
+|                   +---servlet
+|                   |       ProductServlet.java
+|                   |       RegisterServlet.java
+|                   |       UserServlet.java
+|                   |       
+|                   \---util
+|                           DBConnection.java
+|                           
++---web
+|   |   cart.html
+|   |   checkout.html
+|   |   dashboard.html
+|   |   index.html
+|   |   index.jsp
+|   |   login.html
+|   |   profile.html
+|   |   register.html
+|   |   
+|   +---css
+|   |       cart.css
+|   |       checkout.css
+|   |       dashboard.css
+|   |       login.css
+|   |       style.css
+|   |       
+|   +---images
+|   |       baner1.jpg
+|   |       baner2.jpg
+|   |       baner3.jpg
+|   |       baner4.jpg
+|   |       baner5.jpg
+|   |       baner6.jpg
+|   |       banersmall1.jpg
+|   |       banersmall2.jpg
+|   |       logo.png
+|   |       product1.jpg
+|   |       product10.jpg
+|   |       product11.jpg
+|   |       product12.jpg
+|   |       product13.jpg
+|   |       product14.jpg
+|   |       product15.jpg
+|   |       product16.jpg
+|   |       product17.jpg
+|   |       product18.jpg
+|   |       product19.jpg
+|   |       product2.jpg
+|   |       product20.jpg
+|   |       product21.jpg
+|   |       product22.jpg
+|   |       product23.jpg
+|   |       product24.jpg
+|   |       product25.jpg
+|   |       product26.jpg
+|   |       product27.jpg
+|   |       product28.jpg
+|   |       product29.jpg
+|   |       product3.jpg
+|   |       product30.jpg
+|   |       product4.jpg
+|   |       product5.jpg
+|   |       product6.jpg
+|   |       product7.jpg
+|   |       product8.jpg
+|   |       product9.jpg
+|   |       samrad_logo.jpg
+|   |       
+|   +---js
+|   |       dashboard.js
+|   |       products.js
+|   |       profile.js
+|   |       
+|   +---web
+|   |   \---WEB-INF
+|   |           web.xml
+|   |           
+|   \---WEB-INF
+|           web.xml
+|           
+\---WEB-INF
+    |   web.xml
+    |   
+    +---classes
+    \---lib

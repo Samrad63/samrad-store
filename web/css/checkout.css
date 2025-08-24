@@ -1,9 +1,10 @@
 /* ------------------------ */
-
 body {
   font-family: "Vazirmatn", sans-serif;
   background-color: #f8f9fa;
-  padding-top: 70px;
+  padding-top: 80px;
+  direction: rtl;
+  text-align: right;
 }
 
 /* ------------------------ */
@@ -12,13 +13,44 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
 }
-/* ------------------------ */
 
+/* لوگو */
+.navbar-brand img {
+  border-radius: 8px;
+  margin-left: 8px; /* فاصله سمت چپ در RTL */
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+/* لینک‌های منو */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #e0f7f7;
+  transform: scale(1.05);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #e0f7f7;
+  font-weight: 600;
+}
+
+/* ------------------------ */
+/* فرم سفارش */
 form#order-form {
   background-color: #fff;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  text-align: right;
 }
 
 form#order-form .form-label {
@@ -42,8 +74,7 @@ form#order-form textarea:focus {
   outline: none;
 }
 
-/* ------------------------ */
-
+/* دکمه ثبت سفارش */
 .btn-success {
   background: linear-gradient(45deg, #40e0d0, #00ced1);
   color: #fff;
@@ -60,92 +91,24 @@ form#order-form textarea:focus {
   box-shadow: 0 6px 12px rgba(64, 224, 208, 0.5);
 }
 
-/* ------------------------ */
-
+/* پیام تایید */
 #confirmation {
   border-radius: 10px;
   padding: 15px;
   font-weight: 500;
+  text-align: right;
 }
 
 /* ------------------------ */
-
+/* ریسپانسیو */
 @media (max-width: 768px) {
   form#order-form {
     padding: 20px;
   }
-
   .btn-success {
     padding: 8px 16px;
     font-size: 0.95rem;
   }
-}
-/* ------------------------ */
-.navbar-brand {
-  font-weight: 600;
-  color: #fff !important;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
-
-.navbar-brand img {
-  border-radius: 8px;
-  margin-right: 8px;
-  transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover img {
-  transform: scale(1.05);
-}
-
-.navbar-brand:hover {
-  color: #e0f7f7 !important;
-}
-
-/* لینک‌های منو */
-.navbar-dark .navbar-nav .nav-link {
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #e0f7f7;
-  transform: scale(1.05);
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #e0f7f7;
-  font-weight: 600;
-}
-
-/* دکمه Toggle موبایل */
-.navbar-toggler {
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: background 0.3s ease;
-}
-
-.navbar-toggler:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-/* آیکون Toggle */
-.navbar-dark .navbar-toggler-icon {
-  filter: invert(1);
-}
-
-/* منوی باز شده در موبایل */
-.navbar-collapse {
-  background-color: #40e0d0;
-  border-radius: 8px;
-  margin-top: 5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-}
-
-@media (max-width: 768px) {
   .navbar-nav .nav-link {
     padding: 8px 0;
   }
